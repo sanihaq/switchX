@@ -1,0 +1,24 @@
+name: switch_x
+version: 0.1.0
+
+description: >-
+  A very fast link-checker. Crawls sites and checks integrity of links
+  both in HTML and in CSS.
+
+homepage: https://github.com/filiph/switchX
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  args: ">=1.5.1 <3.0.0"
+  console: ^4.1.0
+  logging: ^1.0.1
+
+dev_dependencies:
+  test: ^1.6.3
+  cli_pkg: ^1.4.0
+  grinder: ^0.9.0
+
+executables:
+  switchX: switch_x

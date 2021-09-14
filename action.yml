@@ -1,0 +1,16 @@
+name: 'Check links with switchX'
+description: >
+  Blazing fast localhost crawling via the switchX tool.
+branding:
+  icon: 'link'
+  color: 'green'
+inputs:
+  arguments:
+    description: 'The arguments you would pass to the switchX tool'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.arguments }}
