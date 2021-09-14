@@ -69,7 +69,7 @@ Future<int> switchX({
   final xContent = await _x.readAsString();
   if (!force && startsWith == null || xContent.startsWith('#$startsWith')) {
     print('no need to switch. already using correct $fileName file.');
-    return 1;
+    return 0;
   }
   final yContent = await _y.readAsString();
   await _x.writeAsString(yContent);
