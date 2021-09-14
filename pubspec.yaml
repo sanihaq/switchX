@@ -1,9 +1,7 @@
 name: switch_x
 version: 0.1.0
 
-description: >-
-  A very fast link-checker. Crawls sites and checks integrity of links
-  both in HTML and in CSS.
+description: Switch between two files.
 
 homepage: https://github.com/filiph/switchX
 
