@@ -1,18 +1,17 @@
-library switchX.executable;
+// cSpell:ignore writeln
+
+library switch_x.executable;
 
 import 'dart:async';
 import 'dart:io';
 
 import 'package:switch_x/switch_x.dart';
 
-Future<int> main(List<String> arguments) async {
+Future<int> main(List<String> args) async {
   await runZonedGuarded(() async {
-    // Run the link checker. The returned value will be the program's exit code.
-    exitCode = await switchX();
+    exitCode = await run(args);
   }, (Object e, StackTrace stackTrace) {
-    stderr.writeln("INTERNAL ERROR: Sorry! Please open "
-        "https://github.com/filiph/switchX/issues/new "
-        "in your favorite browser and copy paste the following output there:"
+    stderr.writeln("INTERNAL ERROR: Sorry! can't switch between two file. "
         "\n");
     stderr.writeln(e.toString());
     stderr.writeln(stackTrace.toString());

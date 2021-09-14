@@ -1,16 +1,16 @@
-name: 'Check links with switchX'
+name: "switchX"
 description: >
-  Blazing fast localhost crawling via the switchX tool.
+  Switch between two files.
 branding:
-  icon: 'link'
-  color: 'green'
+  icon: "file"
+  color: "blue"
 inputs:
   arguments:
-    description: 'The arguments you would pass to the switchX tool'
+    description: "The arguments you would pass to the switchX tool"
     required: true
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.arguments }}
